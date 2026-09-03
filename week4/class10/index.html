@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Introduction</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="shortcut icon" href="./favicon.ico" />
+  </head>
+  <body>
+    <header id="heading" class="heading background">
+      <div>
+        <h1>LOGO</h1>
+      </div>
+      <nav class="head-links">
+        <ul>
+          <li><a href="home">Home</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Project</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1 class="hero-head">This is my HERO TEXT</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut culpa
+          similique eius, quod quis itaque eum necessitatibus reprehenderit id
+          amet fuga esse maiores? Tempore neque velit aliquam, tempora deserunt
+          eveniet.
+        </p>
+      </section>
+
+      <section class="contact bg-sky" style="">
+        <form action="">
+          <div class="input-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="John Doe..."
+            />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@gmail.com..."
+            />
+          </div>
+          <div class="input-group">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+
+          <div class="cta">
+            <button class="btn" type="submit">Send Message</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

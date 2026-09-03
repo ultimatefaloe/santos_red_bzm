@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      <!-- name -->
+      <div>
+        <div>
+          <label for="name">Full Name:</label>
+        </div>
+        <div>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="John Doe"
+            required
+          />
+        </div>
+      </div>
+      <!-- email -->
+      <div>
+        <div>
+          <label for="email">Email:</label>
+        </div>
+        <div>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="example@gmail.com"
+            required
+          />
+        </div>
+      </div>
+
+      <!-- meaasge -->
+      <div>
+        <div>
+          <label for="message">Message:</label>
+        </div>
+        <div>
+          <textarea
+            name="message"
+            id="message"
+            placeholder="Enter your message..."
+            cols="20"
+            rows="10"
+          ></textarea>
+        </div>
+      </div>
+
+      <div>
+        <button type="submit">Send Message</button>
+      </div>
+    </form>
+  </body>
+</html>
