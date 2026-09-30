@@ -71,7 +71,7 @@ fruits.unshift("grape");
 // console.log("Checking if user have permission", isPermission)
 // console.log(roles.indexOf("user"))
 
-// let foundRole = roles.find(role => role === "editor")
+let foundRole = roles.find(role => role === "editor")
 
 // console.log("Found role", foundRole)
 
