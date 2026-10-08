@@ -30,33 +30,45 @@ const postCard = (post) => {
   // postUserIdSpan.innerText = `User ${id}`
 
   return `
-      <article class="post-card" data-post-id="${id}">
-      <div class="post-card-header">
-        <span class="post-id">POST #${id}</span>
-        <span class="post-meta">User ${userId}</span>
-      </div>
+  <article class="post-card" data-post-id="${id}">
+              <div class="post-card-header">
+                <span class="post-id">POST ${id}</span>
+                <span class="post-meta">User ${userId}</span>
+              </div>
 
-      <h3 class="post-title">${escapeHTML(formatTitle(title))}</h3>
-      <p class="post-excerpt">${escapeHTML(body)}</p>
+              <h3 class="post-title">${escapeHTML(formatTitle(title))}</h3>
+              <p class="post-excerpt">${escapeHTML(body)}</p>
 
-      <div class="post-actions">
-        <button class="card-action view-button" type="button" data-id="${id}">
-          View
-        </button>
-        <a class="card-action" href="./create.html?id=${id}">
-          Edit
-        </a>
-        <button class="card-action delete delete-button" type="button" data-id="${id}">
-          Delete
-        </button>
-      </div>
-    </article> 
+              <div class="post-actions">
+                <button
+                  class="card-action view-button"
+                  type="button"
+                  data-id="${id}"
+                >
+                  View
+                </button>
+                <a class="card-action" href="./create.html?id=${id}"> Edit </a>
+                <button
+                  class="card-action delete delete-button"
+                  type="button"
+                  data-id="${id}"
+                >
+                  Delete
+                </button>
+              </div>
+            </article>
   
   `;
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   const postContainer = getElement("#postGrid");
-
-  posts.forEach((post) => (postContainer.innerHTML += postCard(post)));
+  const loadingIndicator = getElement("#loadingState");
+  const loadingSearchResult = getElement("#resultText");
+  
+  setTimeout(() => {
+    loadingIndicator.classList.add("hidden");
+    loadingSearchResult.classList.add("hidden");
+    posts.forEach((post) => (postContainer.innerHTML += postCard(post)));
+  }, 5000);
 });
